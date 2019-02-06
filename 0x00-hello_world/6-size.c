@@ -12,7 +12,7 @@ int main(void)
 	long long int ll_int;
 
 	printf("Size of a %s: %lu byte(s)\n", "char", (unsigned long)sizeof(char));
-	printf("Size of a %s: %lu byte(s)\n", "int", (unsigned long)sizeof(int));
+	printf("Size of an %s: %lu byte(s)\n", "int", (unsigned long)sizeof(int));
 	printf("Size of a %s: %lu byte(s)\n", "long", (unsigned long)sizeof(long));
 	printf("Size of a %s: %ld byte(s)\n", "long int", sizeof(long int));
 	printf("Size of a %s: %lu byte(s)\n", "long long int", sizeof(ll_int));

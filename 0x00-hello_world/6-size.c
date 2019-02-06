@@ -9,10 +9,10 @@
  */
 int main(void)
 {
-	printf("Size of a %s: %d byte(s)\n", "char", size(char));
-	printf("Size of a %s: %d byte(s)\n", "int", size(int));
-	printf("Size of a %s: %d byte(s)\n", "long", size(long));
-	printf("Size of a %s: %d byte(s)\n", "long int", size(long int));
-	printf("Size of a %s: %d byte(s)\n", "long long int", size(long long int));
+	printf("Size of a %s: %lu byte(s)\n", "char", (unsigned long)sizeof(char));
+	printf("Size of a %s: %lu byte(s)\n", "int", (unsigned long)sizeof(int));
+	printf("Size of a %s: %lu byte(s)\n", "long", (unsigned long)sizeof(long));
+	printf("Size of a %s: %lu byte(s)\n", "long int", (unsigned long)sizeof(long int));
+	printf("Size of a %s: %lu byte(s)\n", "long long int", (unsigned long)sizeof(long long int));
 	return (0);
 }

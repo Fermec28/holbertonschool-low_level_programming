@@ -10,7 +10,7 @@ int main(void)
 {
 	int c;
 
-	for (c = 48;c < 64; c++)
+	for (c = 48; c < 64; c++)
 	{
 		if (c < 58)
 			putchar(c);
@@ -18,5 +18,5 @@ int main(void)
 			putchar(c + 39);
 	}
 	putchar(10);
-	return(0);
+	return (0);
 }

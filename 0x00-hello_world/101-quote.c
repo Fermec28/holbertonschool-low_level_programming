@@ -2,10 +2,11 @@
 #include <string.h>
 
 /**
- * main
+ * main - Entry point
  *
- * Result: 1 (Error)
+ * Description use other library
  *
+ * Return: Always 1 (Error)
  */
 int main(void)
 {

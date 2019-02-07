@@ -1,4 +1,4 @@
-# include<stdio.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -11,6 +11,6 @@ int main(void)
 
 	for (c = 48; c <= 57; c++)
 		putchar(c);
-	putchar('\n');
+	putchar(10);
 	return (0);
 }

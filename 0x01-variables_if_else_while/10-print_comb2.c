@@ -19,8 +19,8 @@ int main(void)
 			putchar(digit2);
 			if (digit1 != 57 || digit2 != 57)
 			{
-				putchar(32);
 				putchar(44);
+				putchar(32);
 			}
 		}
 	}

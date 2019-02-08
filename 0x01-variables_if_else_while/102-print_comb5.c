@@ -8,15 +8,11 @@
  */
 int main(void)
 {
-	int digit1;
-	int digit2;
-	int digit3;
-	int digit4;
+	int digit1 = 48;
+	int digit2 = 48;
+	int digit3 = 48;
+	int digit4 = 49;
 
-	digit1 = 48;
-	digit2 = 48;
-	digit3 = 48;
-	digit4 = 49;
 	while (digit1 < 58)
 	{
 		while (digit2 < 58)

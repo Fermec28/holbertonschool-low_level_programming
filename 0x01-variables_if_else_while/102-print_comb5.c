@@ -20,7 +20,7 @@ int main(void)
 		{
 			for (digit3 = digit1; digit3 < 58; digit3++)
 			{
-				if (digit1 == 48 && digit2 == 48)
+				if (digit1 == 48 && digit2 == 48 )
 				{
 					if (digit3 == 48)
 					{
@@ -31,8 +31,9 @@ int main(void)
 						initializer =  48;
 					}
 				}
-				else{
-					initializer = digit2 +1;
+				else
+				{
+					initializer = digit2 + 1;
 				}
 				for (digit4 = initializer; digit4 < 58; digit4++)
 				{

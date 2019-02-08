@@ -12,6 +12,7 @@ int main(void)
 	int digit2;
 	int digit3;
 	int digit4;
+	int initializer;
 
 	for (digit1 = 48; digit1 < 58; digit1++)
 	{
@@ -19,7 +20,21 @@ int main(void)
 		{
 			for (digit3 = digit1; digit3 < 58; digit3++)
 			{
-				for (digit4 = digit2 + 1; digit4 < 58; digit4++)
+				if (digit1 == 48 && digit2 == 48)
+				{
+					if (digit3 == 48)
+					{
+						initializer = 49;
+					}
+					else
+					{
+						initializer =  48;
+					}
+				}
+				else{
+					initializer = digit2 +1;
+				}
+				for (digit4 = initializer; digit4 < 58; digit4++)
 				{
 					putchar(digit1);
 					putchar(digit2);

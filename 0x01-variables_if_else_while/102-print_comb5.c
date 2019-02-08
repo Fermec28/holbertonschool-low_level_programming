@@ -12,45 +12,37 @@ int main(void)
 	int digit2;
 	int digit3;
 	int digit4;
-	int initializer;
 
-	for (digit1 = 48; digit1 < 58; digit1++)
+	digit1 = 48;
+	digit2 = 48;
+	digit3 = 48;
+	digit4 = 49;
+	while(digit1 < 58)
 	{
-		for (digit2 = 48; digit2 < 58; digit2++)
+		while(digit2 < 58)
 		{
-			for (digit3 = digit1; digit3 < 58; digit3++)
+			while(digit3 < 58)
 			{
-				if (digit1 == 48 && digit2 == 48 )
-				{
-					if (digit3 == 48)
-					{
-						initializer = 49;
-					}
-					else
-					{
-						initializer =  48;
-					}
-				}
-				else
-				{
-					initializer = digit2 + 1;
-				}
-				for (digit4 = initializer; digit4 < 58; digit4++)
+				while(digit4 < 58)
 				{
 					putchar(digit1);
 					putchar(digit2);
 					putchar(32);
 					putchar(digit3);
 					putchar(digit4);
-					if (digit1 != 57 || digit2 != 56 || digit3 != 57 || digit4 != 57)
-					{
-						putchar(44);
-						putchar(32);
-					}
+					putchar(',');
+					putchar(' ');
+					digit4 += 1;
 				}
+				digit3++;
+				digit4 = 48;
 			}
+			digit2++;
+			digit4 = digit2 +1;
+			digit3 = digit1;
 		}
+		digit1++;
+		digit2 = 48;
 	}
-	putchar(10);
 	return (0);
 }

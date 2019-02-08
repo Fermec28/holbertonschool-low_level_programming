@@ -42,6 +42,8 @@ int main(void)
 		}
 		digit1++;
 		digit2 = 48;
+		digit3 = digit1;
+		digit4= digit2 +1;
 	}
 	putchar(10);
 	return (0);

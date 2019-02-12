@@ -1,8 +1,5 @@
 #include "holberton.h"
 
-
-void print_number(int number);
-
 /**
  * times_table - Print value all tables
  *
@@ -35,6 +32,10 @@ void times_table(void)
 	}
 }
 
+/**
+ * print_number - print number with _putchar in char format
+ * @number: number to be printed
+ */
 void print_number(int number)
 {
 	if (number < 10)

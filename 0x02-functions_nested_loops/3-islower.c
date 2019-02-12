@@ -2,7 +2,7 @@
 /**
  * _islower - sense if the char is lowcase
  *
- * c is a char caracter
+ * @c: is a char to be evaluated
  *
  * Return: 1 if is lowercase 0 if not
  */

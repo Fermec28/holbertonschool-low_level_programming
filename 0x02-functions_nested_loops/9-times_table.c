@@ -14,12 +14,12 @@ void times_table(void)
 	int number2;
 	int product;
 
-	for (number1 = 0;number1 < 10;number1++)
+	for (number1 = 0; number1 < 10; number1++)
 	{
-		for (number2 = 0;number2 < 10;number2++)
+		for (number2 = 0; number2 < 10; number2++)
 		{
 			product = number1 * number2;
-	            	if(product < 10 && number2 != 0)
+			if (product < 10 && number2 != 0)
 				_putchar(32);
 			print_number(product);
 			if (number2 < 9)
@@ -35,8 +35,9 @@ void times_table(void)
 	}
 }
 
-void print_number(int number){
-	if(number < 10)
+void print_number(int number)
+{
+	if (number < 10)
 	{
 		_putchar(number + '0');
 	}

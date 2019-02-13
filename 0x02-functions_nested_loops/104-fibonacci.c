@@ -7,13 +7,9 @@
 int main(void)
 {
 	long max = 100000000000;
-	long fibonacci1 = 1;
-	long fibonacci2 = 0;
+	long fibonacci1 = 1, fibonacci2 = 0, previous1 = 0;
 	int iterator = 0;
-	long previous1 = 0;
-	long previous2 = 0;
-	long aux;
-	long aux2;
+	long previous2 = 0, aux, aux2;
 
 	do {
 		aux = fibonacci1;
@@ -30,7 +26,12 @@ int main(void)
 		previous2 = aux2;
 		if (fibonacci2 > 0)
 		{
-			printf("%ld%ld", fibonacci2, fibonacci1);
+			if (fibonacci1 < 9999999999)
+				printf("%ld0%ld", fibonacci2, fibonacci1);
+			else
+			{
+				printf("%ld%ld", fibonacci2, fibonacci1);
+			}
 		}
 		else
 		{

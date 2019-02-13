@@ -6,11 +6,11 @@
  */
 int main(void)
 {
-        long max = 100000000000;
+	long max = 100000000000;
 	long fibonacci1 = 1;
 	long fibonacci2 = 0;
 	int iterator = 0;
-        long previous1 = 0;
+	long previous1 = 0;
 	long previous2 = 0;
 	long aux;
 	long aux2;

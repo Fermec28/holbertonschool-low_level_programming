@@ -37,9 +37,9 @@ int main(void)
 			printf("%ld", fibonacci1);
 		}
 		iterator++;
-		if (iterator < 99)
+		if (iterator < 98)
 			printf(", ");
-	} while (iterator <= 98);
+	} while (iterator < 98);
 	printf("\n");
 	return (0);
 }

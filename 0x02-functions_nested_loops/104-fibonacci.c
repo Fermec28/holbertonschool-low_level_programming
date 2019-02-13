@@ -30,11 +30,11 @@ int main(void)
 		previous2 = aux2;
 		if (fibonacci2 > 0)
 		{
-			printf("%lu%lu", fibonacci2, fibonacci1);
+			printf("%ld%ld", fibonacci2, fibonacci1);
 		}
 		else
 		{
-			printf("%lu", fibonacci1);
+			printf("%ld", fibonacci1);
 		}
 		iterator++;
 		if (iterator < 99)

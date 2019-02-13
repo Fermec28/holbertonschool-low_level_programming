@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-	unsigned long int max = 1000000000000000000;
-	unsigned long int fibonacci1 = 1;
-	unsigned long int fibonacci2 = 0;
+	long int max = 1000000000000000000;
+	long int fibonacci1 = 1;
+	long int fibonacci2 = 0;
 	int iterator = 0;
-	unsigned long int previous1 = 0;
-	unsigned long int previous2 = 0;
-	unsigned long int aux;
-	unsigned long int aux2;
+	long int previous1 = 0;
+	long int previous2 = 0;
+	long int aux;
+	long int aux2;
 
 	do {
 		aux = fibonacci1;

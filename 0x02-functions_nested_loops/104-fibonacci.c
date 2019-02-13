@@ -6,20 +6,40 @@
  */
 int main(void)
 {
-	double fibonacci = 1;
+	unsigned long int max = 1000000000000000000;
+	unsigned long int fibonacci1 = 1;
+	unsigned long int fibonacci2 = 0;
 	int iterator = 0;
-	double previous = 0;
-	double aux;
+	unsigned long int previous1 = 0;
+	unsigned long int previous2 = 0;
+	unsigned long int aux;
+	unsigned long int aux2;
 
 	do {
-		aux = fibonacci;
-		fibonacci += previous;
-		printf("%.0lf", fibonacci);
-		previous = aux;
+		aux = fibonacci1;
+		aux2 = fibonacci2;
+		fibonacci1 += previous1;
+		if (fibonacci1 > max - 1)
+		{
+			fibonacci1 -= previous1;
+			fibonacci1 = fibonacci1 - max + previous1;
+			fibonacci2++;
+		}
+		previous1 = aux;
+		fibonacci2 += previous2;
+		previous2 = aux2;
+		if (fibonacci2 > 0)
+		{
+			printf("%lu%lu", fibonacci2, fibonacci1);
+		}
+		else
+		{
+			printf("%lu", fibonacci1);
+		}
 		iterator++;
 		if (iterator < 99)
 			printf(", ");
-	} while (iterator < 99);
+	} while (iterator <= 98);
 	printf("\n");
 	return (0);
 }

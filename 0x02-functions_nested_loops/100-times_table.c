@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * times_table - Print value all tables
- *
+ * print_times_table - Print value all tables
+ * @n: num to print table
  * Return: Always 0.
  */
 void print_times_table(int n)
@@ -11,7 +11,7 @@ void print_times_table(int n)
 	int number2;
 	int product;
 
-	if (n <= 15 && n >= 0)
+	if (~(n > 15 || n < 0))
 	{
 		for (number1 = 0; number1 <= n; number1++)
 		{

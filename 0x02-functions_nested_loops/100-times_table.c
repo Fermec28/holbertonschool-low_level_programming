@@ -11,7 +11,7 @@ void print_times_table(int n)
 	int number2;
 	int product;
 
-	if (~(n > 15 || n < 0))
+	if ( n <= 15 && n >= 0 )
 	{
 		for (number1 = 0; number1 <= n; number1++)
 		{

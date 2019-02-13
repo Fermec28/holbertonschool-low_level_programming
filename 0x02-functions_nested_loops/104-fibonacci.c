@@ -17,9 +17,9 @@ int main(void)
 		printf("%.0lf", fibonacci);
 		previous = aux;
 		iterator++;
-		if (iterator < 98)
+		if (iterator < 99)
 			printf(", ");
-	} while (iterator < 98);
+	} while (iterator < 99);
 	printf("\n");
 	return (0);
 }

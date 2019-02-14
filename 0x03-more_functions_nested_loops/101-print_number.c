@@ -5,14 +5,21 @@
  */
 void print_number(int n)
 {
+	int aux1;
+	int aux2;
+
 	if (n < 10 && n >= 0)
 	{
 		_putchar(n + '0');
 	}
 	else if (n < 0)
 	{
+		aux1 = n / 10;
+		aux2 = n % 10;
 		_putchar('-');
-		print_number(-n);
+		if (aux1 != 0)
+			print_number(-aux1);
+		print_number(-aux2);
 	}
 	else
 	{

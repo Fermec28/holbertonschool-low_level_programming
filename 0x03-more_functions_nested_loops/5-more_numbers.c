@@ -8,7 +8,7 @@ void more_numbers(void)
 	int number;
 	int iterator;
 
-	for (iterator = 0; iterator < 9; iterator++)
+	for (iterator = 0; iterator < 10; iterator++)
 	{
 		for (number = 0; number < 15; number++)
 			print_any_number(number);

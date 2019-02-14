@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * int _isdigit - Function calculate digit
+ *  _isdigit - Function calculate digit
  * @c: number to evaluate
  *
+ * Return: 1 if is digit 0 otherwise
  */
 int _isdigit(int c)
 {

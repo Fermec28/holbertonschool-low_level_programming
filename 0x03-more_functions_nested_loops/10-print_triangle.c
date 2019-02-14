@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_square - print # matrix nxn
+ * print_triangle - print # matrix nxn
  * @size: size of matrix
  */
 void print_triangle(int size)

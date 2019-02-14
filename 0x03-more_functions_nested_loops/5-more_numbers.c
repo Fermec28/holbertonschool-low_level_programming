@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * print_most_numbers - print num 0 - 9
+ * more_numbers - print num 0 - 14 x 10
  */
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int number;
 	int iterator;

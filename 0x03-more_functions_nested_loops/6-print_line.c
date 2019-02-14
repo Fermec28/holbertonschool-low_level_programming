@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * print-line - print line n times
- * @n: times to print _
+ * print_line - print line _ n times
+ * @n: times to print
  */
 void print_line(int n)
 {
@@ -10,7 +10,7 @@ void print_line(int n)
 
 	if (n > 0)
 	{
-		for (iterator = 0; iterator < n; iterator++)
+		for (iterator = 0; iterator <= n; iterator++)
 		{
 			_putchar('_');
 		}

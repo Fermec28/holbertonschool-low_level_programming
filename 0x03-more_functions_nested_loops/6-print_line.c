@@ -7,6 +7,7 @@
 void print_line(int n)
 {
 	int iterator;
+
 	if (n > 0)
 	{
 		for (iterator = 0; iterator < n; iterator++)

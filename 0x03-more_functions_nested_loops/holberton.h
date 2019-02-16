@@ -11,3 +11,6 @@ void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
+long int _isprime(long int num);
+long int find_prime (long int num, long int prime);
+long int next_prime (long int num);

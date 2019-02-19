@@ -5,14 +5,15 @@
  */
 void puts_half(char *str)
 {
-	long int size;
+	int size;
+	int iterator;
 
-	size = _lstrlen(str);
-	size = (size % 2 == 0) ? size / 2 : (size - 1) / 2;
-	while (*(str + size - 1) != '\0')
+	size = _strlen(str);
+	iterator = (size % 2 == 0) ? size / 2 : (size - 1) / 2;
+	while (*(str + iterator) != '\0')
 	{
-		_putchar(*(str + size));
-		size++;
+		_putchar(*(str + iterator));
+		iterator++;
 	}
 	_putchar(10);
 }
@@ -22,7 +23,7 @@ void puts_half(char *str)
  * @s: string to becalculated
  * Return: size of string
  */
-long int _lstrlen(char *s)
+int _strlen(char *s)
 {
 	long int cont = 0;
 

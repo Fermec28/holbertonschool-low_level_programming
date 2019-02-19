@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
  * _strcpy - function copy the string pointed
@@ -8,10 +9,10 @@
 char *_strcpy(char *dest, char *src)
 {
 	int cont = 0;
-	do
-	{
+
+	do {
 		*(dest + cont) = *(src + cont);
 		cont++;
-	} while (*(src + cont) != '\0');
-	return dest;
+	} while (*(src + cont - 1) != '\0');
+	return (dest);
 }

@@ -9,7 +9,7 @@ void puts_half(char *str)
 	int iterator;
 
 	size = _strlen(str);
-	iterator = (size % 2 == 0) ? size / 2 : ((size - 1)/ 2) + 1;
+	iterator = (size % 2 == 0) ? size / 2 : ((size - 1) / 2) + 1;
 	while (*(str + iterator) != '\0')
 	{
 		_putchar(*(str + iterator));
@@ -25,7 +25,7 @@ void puts_half(char *str)
  */
 int _strlen(char *s)
 {
-        int cont = 0;
+	int cont = 0;
 
 	while (*(s + cont) != '\0')
 		cont++;

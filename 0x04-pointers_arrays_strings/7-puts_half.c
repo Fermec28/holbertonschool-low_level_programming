@@ -9,7 +9,7 @@ void puts_half(char *str)
 
 	size = _lstrlen(str);
 	size = (size % 2 == 0) ? size / 2 : (size - 1) / 2;
-	while (*(str + size) != '\0')
+	while (*(str + size - 1) != '\0')
 	{
 		_putchar(*(str + size));
 		size++;

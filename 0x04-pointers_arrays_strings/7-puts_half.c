@@ -7,7 +7,7 @@ void puts_half(char *str)
 {
 	long int size;
 
-	size = _strlen(str);
+	size = _lstrlen(str);
 	size = (size % 2 == 0) ? size / 2 : (size - 1) / 2;
 	while (*(str + size) != '\0')
 	{
@@ -22,7 +22,7 @@ void puts_half(char *str)
  * @s: string to becalculated
  * Return: size of string
  */
-long int _strlen(char *s)
+long int _lstrlen(char *s)
 {
 	long int cont = 0;
 

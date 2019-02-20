@@ -12,6 +12,7 @@ int _atoi(char *s)
 	int result = 0;
 	int first_pos = 0;
 	int multiplier;
+	int last_pos;
 
 	first_pos = find_pos_num(s);
 	last_pos = find_pos_last_num(s, first_pos);
@@ -77,7 +78,7 @@ int find_pos_last_num(char *s, int initial)
 	int iterator = initial;
 	int value =  *(s + iterator);
 
-	while (value <= '9' || value >= '0')
+	while (value <= '9' && value >= '0')
 	{
 		iterator++;
 		value =  *(s + iterator);

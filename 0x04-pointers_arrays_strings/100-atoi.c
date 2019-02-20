@@ -58,7 +58,7 @@ int find_pos_num(char *s)
  * @initial: initial position
  * Return: position of the last number
  */
-int my_atoi(char *s, int start, int current , int value)
+int my_atoi(char *s, int start, int current, int value)
 {
 	int current_v;
 	int result;
@@ -68,18 +68,18 @@ int my_atoi(char *s, int start, int current , int value)
 	{
 		if (current == start)
 		{
-			result= my_atoi(s, start, current + 1, current_v - '0');
-			return result;
+			result = my_atoi(s, start, current + 1, current_v - '0');
+			return (result);
 		}
 		else
 		{
-			result = my_atoi(s,start, current + 1, value * 10 + (current_v - '0'));
-			return result;
+			result = my_atoi(s, start, current + 1, value * 10 + (current_v - '0'));
+			return (result);
 		}
 	}
 	else
 	{
-		return value;
+		return (value);
 	}
 }
 /**

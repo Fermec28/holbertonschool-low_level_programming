@@ -27,7 +27,6 @@ int _atoi(char *s)
 		}
 		contador++;
 	}
-
 	negatives = _num_negative(s, first_pos);
 	return ((negatives % 2 != 0) ? -result : result);
 }
@@ -57,15 +56,15 @@ int _num_negative(char *s, int pos)
  */
 int find_pos_num(char *s)
 {
-	int cont = 0;
-	int value =  *(s + cont);
+	int pos = 0;
+	int value =  *(s + pos);
 
-	while ((value > '9' || value < '0') && value >= 0 && value <= 255)
+	while (!is_digit(value) && value >= 0 && value <= 255 && value != '\0')
 	{
-		cont++;
-		value =  *(s + cont);
+		pos++;
+		value =  *(s + pos);
 	}
-	return (cont);
+	return (pos);
 }
 /**
  * find_pos_last_num - find position last number

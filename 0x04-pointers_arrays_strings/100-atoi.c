@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  *  _atoi - convert char to integer
@@ -8,25 +7,12 @@
 int _atoi(char *s)
 {
 	int negatives;
-	int contador = 0;
 	int result = 0;
 	int first_pos = 0;
-	int multiplier;
-	int last_pos;
+
 
 	first_pos = find_pos_num(s);
-	last_pos = find_pos_last_num(s, first_pos);
-	contador = first_pos;
-	while (contador >= first_pos && contador <= last_pos)
-	{
-		if (is_digit(*(s + contador)))
-		{
-			multiplier = (contador == 0) ? 1 : 10;
-			result *= multiplier;
-			result += *(s + contador) - '0';
-		}
-		contador++;
-	}
+	result = my_atoi(s, first_pos, first_pos, 0);
 	negatives = _num_negative(s, first_pos);
 	return ((negatives % 2 != 0) ? -result : result);
 }
@@ -72,17 +58,29 @@ int find_pos_num(char *s)
  * @initial: initial position
  * Return: position of the last number
  */
-int find_pos_last_num(char *s, int initial)
+int my_atoi(char *s, int start, int current , int value)
 {
-	int iterator = initial;
-	int value =  *(s + iterator);
+	int current_v;
+	int result;
 
-	while (value <= '9' && value >= '0')
+	current_v = *(s + current);
+	if (current_v != '\0' && is_digit(current_v))
 	{
-		iterator++;
-		value =  *(s + iterator);
+		if (current == start)
+		{
+			result= my_atoi(s, start, current + 1, current_v - '0');
+			return result;
+		}
+		else
+		{
+			result = my_atoi(s,start, current + 1, value * 10 + (current_v - '0'));
+			return result;
+		}
 	}
-	return (iterator - 1);
+	else
+	{
+		return value;
+	}
 }
 /**
  * is_digit - determinated if is digit

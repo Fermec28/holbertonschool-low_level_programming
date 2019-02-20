@@ -14,5 +14,5 @@ char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
 int _num_negative(char *s, int pos);
 int find_pos_num(char *s);
-int find_pos_last_num(char *s, int initial);
+int my_atoi(char *, int, int, int);
 int is_digit(char c);

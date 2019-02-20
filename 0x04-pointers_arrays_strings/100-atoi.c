@@ -6,23 +6,23 @@
  */
 int _atoi(char *s)
 {
-	int negatives;
+	int ispositive;
 	int result = 0;
 	int first_pos = 0;
 
 
 	first_pos = find_pos_num(s);
-	result = my_atoi(s, first_pos, first_pos, 0);
-	negatives = _num_negative(s, first_pos);
-	return ((negatives % 2 != 0) ? -result : result);
+	ispositive = _is_positive(s, first_pos);
+	result = my_atoi(s, first_pos, first_pos, 0, ispositive);
+	return (result);
 }
 /**
- * _num_negative - calculate how many negatives has an string
+ * _is_positive - calculate how many negatives has an string
  * @s: string to calculate
  * @pos: last posicion to check sign
- * Return: quantity of negatives
+ * Return: 1 if is positive 0 if is negative
  */
-int _num_negative(char *s, int pos)
+int _is_positive(char *s, int pos)
 {
 	int negatives = 0;
 	int contador = 0;
@@ -33,7 +33,7 @@ int _num_negative(char *s, int pos)
 			negatives++;
 		contador++;
 	}
-	return (negatives);
+	return (negatives % 2 == 0);
 }
 /**
  * find_pos_num - find position first number
@@ -53,12 +53,15 @@ int find_pos_num(char *s)
 	return (pos);
 }
 /**
- * find_pos_last_num - find position last number
+ * my_atoi - return the number
  * @s: string
- * @initial: initial position
+ * @start: initial position
+ * @current: actual position
+ * @value: current value
+ * @ispositive: if the number is positive
  * Return: position of the last number
  */
-int my_atoi(char *s, int start, int current, int value)
+int my_atoi(char *s, int start, int current, int value, int ispositive)
 {
 	int current_v;
 	int result;
@@ -68,12 +71,17 @@ int my_atoi(char *s, int start, int current, int value)
 	{
 		if (current == start)
 		{
-			result = my_atoi(s, start, current + 1, current_v - '0');
+			current_v = ispositive ? (current_v - '0') : -(current_v - '0');
+			result = my_atoi(s, start, current + 1, current_v, ispositive);
 			return (result);
 		}
 		else
 		{
-			result = my_atoi(s, start, current + 1, value * 10 + (current_v - '0'));
+			if (ispositive)
+				value = (value * 10) + (current_v - '0');
+			else
+				value = (value * 10) - (current_v - '0');
+			result = my_atoi(s, start, current + 1, value, ispositive);
 			return (result);
 		}
 	}

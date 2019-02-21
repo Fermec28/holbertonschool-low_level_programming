@@ -7,14 +7,11 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int iterator_s1;
-	int iterator_s2;
+	int iterator = 0;
 
-	for (iterator_s1 = 0; s1[iterator_s1] ; iterator_s1++)
+	while(s1[iterator] == s2[iterator] && (!s1[iterator] && !s2[iterator]))
 	{
+		iterator++;
 	}
-	for (iterator_s2 = 0; s2[iterator_s2] ; iterator_s2++)
-	{
-	}
-	return (iterator_s1 - iterator_s2);
+	return (s1[iterator] - s2[iterator]);
 }

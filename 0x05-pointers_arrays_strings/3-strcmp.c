@@ -9,7 +9,7 @@ int _strcmp(char *s1, char *s2)
 {
 	int iterator = 0;
 
-	while(s1[iterator] == s2[iterator] && (!s1[iterator] && !s2[iterator]))
+	while(s1[iterator] == s2[iterator] && s1[iterator] && s2[iterator])
 	{
 		iterator++;
 	}

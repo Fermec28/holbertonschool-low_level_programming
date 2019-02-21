@@ -14,6 +14,6 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		dest[iterator_dest] = src[iterator_dest];
 	}
-	dest[iterator_dest] = '\0';
+	dest[n] = '\0';
 	return (dest);
 }

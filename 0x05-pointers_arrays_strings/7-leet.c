@@ -7,20 +7,18 @@
 char *leet(char *s)
 {
 	int iterator;
+	int ikeys = 0;
+	char keys[] = "aeotlAEOTL";
+	int values[] = {4, 3, 7, 0, 1};
 
-	for (iterator = 0 ; s[iterator]; iterator++)
+	for (iterator = 0; s[iterator]; iterator++)
 	{
-		if (s[iterator] == 'a' || s[iterator] == 'A')
-			s[iterator] = '4';
-		if (s[iterator] == 'e' || s[iterator] == 'E')
-			s[iterator] = '3';
-		if (s[iterator] == 'o' || s[iterator] == 'O')
-			s[iterator] = '7';
-		if (s[iterator] == 't' || s[iterator] == 'T')
-			s[iterator] = '0';
-		if (s[iterator] == 'l' || s[iterator] == 'L')
-			s[iterator] = '1';
-
+		while (keys[ikeys])
+		{
+			if (s[iterator] == keys[ikeys])
+				s[iterator] = values[ikeys % 5] + '0';
+			ikeys++;
+		}
 	}
 
 	return (s);

@@ -10,7 +10,8 @@ char *rot13(char *s)
 	int ikeys = 0;
 	char keys[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char values[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int flag= 1;
+	int flag = 1;
+
 	for (iterator = 0; s[iterator]; iterator++)
 	{
 		while (keys[ikeys] && flag)

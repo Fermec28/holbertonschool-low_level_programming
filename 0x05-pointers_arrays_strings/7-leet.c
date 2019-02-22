@@ -19,6 +19,7 @@ char *leet(char *s)
 				s[iterator] = values[ikeys % 5] + '0';
 			ikeys++;
 		}
+		ikeys = 0;
 	}
 
 	return (s);

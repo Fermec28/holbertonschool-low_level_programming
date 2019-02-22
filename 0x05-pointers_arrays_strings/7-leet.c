@@ -9,14 +9,14 @@ char *leet(char *s)
 	int iterator;
 	int ikeys = 0;
 	char keys[] = "aeotlAEOTL";
-	int values[] = {4, 3, 7, 0, 1};
+	char values[] = "43071";
 
 	for (iterator = 0; s[iterator]; iterator++)
 	{
 		while (keys[ikeys])
 		{
 			if (s[iterator] == keys[ikeys])
-				s[iterator] = values[ikeys % 5] + '0';
+				s[iterator] = values[ikeys % 5];
 			ikeys++;
 		}
 		ikeys = 0;

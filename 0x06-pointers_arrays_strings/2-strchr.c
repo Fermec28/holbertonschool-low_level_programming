@@ -14,5 +14,5 @@ char *_strchr(char *s, char c)
 	{
 		iterator++;
 	}
-	return ((s[iterator] != '\0') ? &*(s + iterator) : 0);
+	return ((s[iterator] == '\0') ? &*(s + iterator) : 0);
 }

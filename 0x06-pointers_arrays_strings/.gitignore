@@ -1,2 +1,5 @@
 0-main.c
 0-memset
+1-main.c
+1-memcpy
+2-strchr

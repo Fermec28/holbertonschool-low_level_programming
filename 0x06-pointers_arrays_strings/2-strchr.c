@@ -14,6 +14,6 @@ char *_strchr(char *s, char c)
 	{
 		iterator++;
 	}
-	pointer = (s[iterator]) ? &s[iterator] : 0;
+	pointer = (s[iterator]) ? &*(s + iterator) : 0;
 	return (pointer);
 }

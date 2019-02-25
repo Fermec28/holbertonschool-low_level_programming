@@ -5,8 +5,6 @@
  * @accept: char to be compared
  * Return: length to be compared
  */
-char *s = "hello, world";
-char *f = "oleh";
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i_s = 0;

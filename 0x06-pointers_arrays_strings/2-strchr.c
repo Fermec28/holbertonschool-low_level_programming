@@ -8,11 +8,12 @@
 char *_strchr(char *s, char c)
 {
 	unsigned int iterator = 0;
-	char *pointer;
 
-	while (s[iterator] != c && s[iterator])
+	while (s[iterator] != c)
 	{
+		if (!s[iterator])
+			return (0);
 		iterator++;
 	}
-	return ((s[iterator] == '\0') ? &*(s + iterator) : 0);
+	return (&s[iterator]);
 }

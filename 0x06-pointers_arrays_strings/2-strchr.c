@@ -7,7 +7,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int iterator;
+	unsigned int iterator = 0;
 
 	while (s[iterator] != c && s[iterator])
 	{

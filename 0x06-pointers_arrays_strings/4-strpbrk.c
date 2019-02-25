@@ -30,5 +30,5 @@ char *_strpbrk(char *s, char *accept)
 		i_s++;
 	}
 
-	return (ocurrence != -1 ? s + ocurrence : 0);
+	return (ocurrence != -1 ? s + ocurrence : NULL);
 }

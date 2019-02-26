@@ -7,3 +7,4 @@ char *_strstr(char *haystack, char *needle);
 int is_thesame(char* string, char* substring);
 void print_chessboard(char (*a)[8]);
 int _putchar(char );
+void print_diagsums(int *a, int size);

@@ -7,13 +7,13 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int diag1 = 0;
-	int diag2 = 0;
-	int i,j;
+	unsigned int diag1 = 0;
+	unsigned int diag2 = 0;
+	int i, j;
 
-	for (i = 0; i < 8; i++)
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < 8; j++)
+		for (j = 0; j < size; j++)
 		{
 			if (i == j)
 				diag1 += *(a + (i * size) + j);
@@ -21,5 +21,5 @@ void print_diagsums(int *a, int size)
 				diag2 += *(a + (i * size) + j);
 		}
 	}
-	printf("%d, %d\n",diag1, diag2);
+	printf("%d, %d\n", diag1, diag2);
 }

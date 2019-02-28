@@ -6,18 +6,29 @@
  */
 int is_prime_number(int n)
 {
-	int divisor = 2;
-
-	if (n > 7)
+	if( n > 1)
 	{
-		while (n % divisor != 0 && divisor < n)
+		if (number_is_prime(n, n - 1) == 1)
 		{
-			divisor++;
+			return (1);
 		}
-		return (divisor == n ? 1 : 0);
+
 	}
-	else if (n == 1 || n == 2 || n == 3 || n == 5 || n == 7)
+	return(0);
+}
+
+int number_is_prime(int base , int num)
+{
+	if (num == 1)
+	{
 		return (1);
+	}
+	else if(base % num == 0)
+	{
+		return (1 + number_is_prime(base, num - 1));
+	}
 	else
-		return (0);
+	{
+		return (number_is_prime(base, num - 1));
+	}
 }

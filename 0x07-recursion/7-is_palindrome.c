@@ -6,18 +6,49 @@
  */
 int is_palindrome(char *s)
 {
-	int divisor = 2;
+	int length;
+	int aux;
 
-	if (n > 7)
-	{
-		while (n % divisor != 0 && divisor < n)
-		{
-			divisor++;
-		}
-		return (divisor == n ? 1 : 0);
-	}
-	else if (n == 1 || n == 2 || n == 3 || n == 5 || n == 7)
+	length = _strlen_recursion(s);
+	aux = calculate_palindrome(s, length, 0);
+	if (aux == 0)
 		return (1);
 	else
 		return (0);
+}
+
+int calculate_palindrome(char *s, int size, int current)
+{
+	int middle;
+
+	middle = size % 2 == 0 ? (size / 2) : ((size + 1) / 2);
+	if (current < middle)
+	{
+		if (s[current] == s[size - current - 1])
+		{
+			return (0 + calculate_palindrome(s, size, current + 1));
+		}
+		else
+		{
+			return (1 + calculate_palindrome(s, size, current + 1));
+		}
+
+	}
+	return (0);
+}
+/**
+ * _strlen_recursion - returns the length of a string
+ * @s: string to print
+ * Return: Length of array
+ */
+int _strlen_recursion(char *s)
+{
+	if (s[0] != '\0')
+	{
+		return (1 + _strlen_recursion(s + 1));
+	}
+	else
+	{
+		return (0);
+	}
 }

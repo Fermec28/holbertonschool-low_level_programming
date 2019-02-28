@@ -6,7 +6,7 @@
  */
 int is_prime_number(int n)
 {
-	if( n > 1)
+	if (n > 1)
 	{
 		if (number_is_prime(n, n - 1) == 1)
 		{
@@ -14,16 +14,21 @@ int is_prime_number(int n)
 		}
 
 	}
-	return(0);
+	return (0);
 }
-
-int number_is_prime(int base , int num)
+/**
+ * number_is_prime - calculate the prime
+ * @base: base num
+ * @num: num iterate
+ * Return: times base its divided
+ */
+int number_is_prime(int base, int num)
 {
 	if (num == 1)
 	{
 		return (1);
 	}
-	else if(base % num == 0)
+	else if (base % num == 0)
 	{
 		return (1 + number_is_prime(base, num - 1));
 	}

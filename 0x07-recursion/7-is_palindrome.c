@@ -21,7 +21,10 @@ int calculate_palindrome(char *s, int size, int current)
 {
 	int middle;
 
-	middle = size % 2 == 0 ? (size / 2) : ((size + 1) / 2);
+	if (size % 2 == 0)
+		middle = (size / 2);
+	else
+		((size + 1) / 2);
 	if (current < middle)
 	{
 		if (s[current] == s[size - current - 1])

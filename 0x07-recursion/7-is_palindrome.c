@@ -16,7 +16,13 @@ int is_palindrome(char *s)
 	else
 		return (0);
 }
-
+/**
+ * calculate_palindrome - calculate palindrome
+ * @s: string
+ * @size: size of string
+ * @current: current interator
+ * Return: 1 if its palindrome
+ */
 int calculate_palindrome(char *s, int size, int current)
 {
 	int middle;

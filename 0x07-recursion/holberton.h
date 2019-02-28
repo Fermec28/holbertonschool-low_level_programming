@@ -10,3 +10,4 @@ int number_is_prime(int base , int num);
 int _calculate_sqrt(int base, int num);
 int calculate_palindrome(char *s, int size, int current);
 int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);

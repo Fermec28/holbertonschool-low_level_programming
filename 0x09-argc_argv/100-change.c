@@ -4,18 +4,18 @@
 /**
  * exchange - calculate minimun count of exhange
  * @coins: array of coins
- * @current: represent actual coin
+ * @cur: represent actual coin
  * @value: value to be exchange
  * Return: 1 if can exchange
  */
-int exchange(int *coins, int current, int value)
+int exchange(int *coins, int cur, int value)
 {
-	if (value >= coins[current])
-		return (1 + exchange(coins, current, value - coins[current]));
+	if (value >= coins[cur])
+		return (value / coins[cur] + exchange(coins, cur, value % coins[cur]));
 	else if (value == 0)
 		return (0);
 	else
-		return (exchange(coins, current + 1, value));
+		return (exchange(coins, cur + 1, value));
 }
 /**
  * main - Entry point

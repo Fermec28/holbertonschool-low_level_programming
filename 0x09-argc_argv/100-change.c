@@ -26,18 +26,20 @@ int exchange(int *coins, int current, int value)
 int main(int argc, char *argv[])
 {
 	int coins[] = {25, 10, 5, 2, 1};
+	int n;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		return (0);
 	}
-	if (atoi(argv[1]) <= 0)
+	n = atoi(argv[1]);
+	if (n < 0)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	else
-		printf("%d\n", exchange(coins, 0, atoi(argv[1])));
+		printf("%d\n", exchange(coins, 0, n));
 	return (0);
 }

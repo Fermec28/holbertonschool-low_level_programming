@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdupstr_concat - Duplicate string
+ * str_concat - Duplicate string
  * @s1: string one
  * @s2: string two
  * Return: pointer to copy array

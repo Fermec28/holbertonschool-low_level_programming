@@ -13,9 +13,9 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i;
 	unsigned int size_s1, size_s2;
 
-	if(s1 == NULL)
+	if (s1 == NULL)
 		s1 = "";
-	if(s2 == NULL)
+	if (s2 == NULL)
 		s2 = "";
 	for (size_s1 = 0; *(s1 + size_s1) && s1; size_s1++)
 	{

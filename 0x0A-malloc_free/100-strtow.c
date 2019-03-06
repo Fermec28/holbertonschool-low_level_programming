@@ -9,5 +9,6 @@
 char **strtow(char *str);
 {
 	char **p;
+
 	return (p);
 }

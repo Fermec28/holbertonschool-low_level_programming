@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _calloc -
+ * _calloc - allocation memory
  * @nmemb: number of members
  * @size: size of each member on bytes
  * Return: pointer

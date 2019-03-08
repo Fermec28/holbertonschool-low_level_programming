@@ -4,12 +4,13 @@
 /**
  * main -Entry Point
  * @argc: Num of arguments
- * @argb: array of arguments
+ * @argv: array of arguments
  * Return: 0 if its successful
  */
 int main(int argc, char *argv[])
 {
 	int i_argc, i_argv;
+
 	if (argc != 3)
 	{
 		exit(98);
@@ -25,5 +26,5 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-	return(0);
+	return (0);
 }

@@ -1,6 +1,8 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+
 /**
  * main -Entry Point
  * @argc: Num of arguments
@@ -13,9 +15,10 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
+		printf("Error\n");
 		exit(98);
 	}
-	for (i_argc = 1; i_argc < i_argc; i++)
+	for (i_argc = 1; i_argc < i_argc; i_argc++)
 	{
 		for (i_argv = 0; argv[i_argc][i_argv]; i_argv++)
 		{

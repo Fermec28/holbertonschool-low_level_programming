@@ -1,3 +1,4 @@
-#ifndef ABS(x)
+#ifndef SCOPE
+#define SCOPE
 #define ABS(x) (((x) > 0) ? (x) : (-x))
 #endif

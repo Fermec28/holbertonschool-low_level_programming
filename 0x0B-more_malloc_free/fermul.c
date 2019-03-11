@@ -47,16 +47,37 @@ int main(int argc, char *argv[])
 		i_str2 = 0;
 		while(argv[2][i_str2])
 		{
+			//printf("bias before calculado: %d\n",bias);
 			bias += product_characters(argv[2][i_str2],argv[1][i_str1]);
 			if (i_str1 + i_str2 < size)
 			{
 				bias += (p[i_str1 + i_str2] - 48);
 				p[i_str1 + i_str2] = (bias % 10) + 48;
+				printf("bias operado calculado: %d\t",bias);
+				printf("Resultado operacion: %c\t",p[i_str1 + i_str2] = (bias % 10) + 48);
 				bias /= 10;
 			}
+			else
+			{
+				printf("--------biaaaas: %d",bias);
+				while (bias % 10 != 0)
+				{
+					size++;
+					p = realloc(p,size + 1);
+					if (!p)
+					{
+						printf("Error\n");
+						exit(98);
+					}
+					p[size - 1] = (bias % 10) + 48;
+					printf("bias on malloc calculado: %d\n",bias % 10);
+					bias /= 10;
+				}
+			}
 			i_str2++;
+			printf("bias after calculado: %d\n",bias);
 		}
-		while (bias % 10 != 0)
+		/*while (bias % 10 != 0)
 		{
 			size++;
 			p = realloc(p,size + 1);
@@ -66,8 +87,12 @@ int main(int argc, char *argv[])
 				exit(98);
 			}
 			p[size - 1] = (bias % 10) + 48;
+			printf("bias on malloc calculado: %d\n",bias % 10);
 			bias /= 10;
-		}
+			}*/
+		printf("/n-resultado de iteracio: ");
+		myprint(p);
+		printf("\n");
 		i_str1++;
 	}
 	p[size]= '\0';

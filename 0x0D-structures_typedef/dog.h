@@ -1,11 +1,17 @@
-#include "dog.h"
-
+#ifndef SCOPE
+#define SCOPE
 /**
- * free_dog -
+ * struct dog - Dog
+ * @name: pointer to name
+ * @age: age of Dog
+ * @owner: Third me
  *
- * Return: 
+ * Description: Dog
  */
-void free_dog(dog_t *d)
+struct dog
 {
-
+	char *name;
+	float age;
+	char *owner;
 }
+#endif

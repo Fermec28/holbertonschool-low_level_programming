@@ -48,22 +48,12 @@ int main(int argc, char *argv[])
 		while(argv[2][i_str2])
 		{
 			bias += product_characters(argv[2][i_str2],argv[1][i_str1]);
-			bias += (p[i_str1 + i_str2] - 48);
-			if (i_str1 + i_str2 > size)
+			if (i_str1 + i_str2 < size)
 			{
-				size = i_str1 + i_str2;
-				p = realloc(p,size + 1);
-				if (!p)
-				{
-					printf("Error\n");
-					exit(98);
-				}
-				p[size - 1] = '0';
+				bias += (p[i_str1 + i_str2] - 48);
+				p[i_str1 + i_str2] = (bias % 10) + 48;
+				bias /= 10;
 			}
-			p[i_str1 + i_str2] = (bias % 10) + 48;
-			printf("%c\n",p[i_str1 + i_str2]);
-			bias /= 10;
-			printf("valor de bias cuando se termina un ciclo : %d\n", bias);
 			i_str2++;
 		}
 		while (bias % 10 != 0)
@@ -82,7 +72,7 @@ int main(int argc, char *argv[])
 	}
 	p[size]= '\0';
 	reverse_str(p,size);
-	printf("EL valor de la multiplicacion es: %s\n",p);
+	myprint(p);
 	free(p);
 	return (0);
 }
@@ -111,7 +101,7 @@ void myprint(char *str)
 	int i = 0;
 	while(str[i])
 	{
-		printf("%c", str[i]);
+		printf("%c",str[i]);
 		i++;
 	}
 printf("\n");

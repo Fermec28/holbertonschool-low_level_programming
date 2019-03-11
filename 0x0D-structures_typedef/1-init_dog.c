@@ -1,11 +1,15 @@
 #include "dog.h"
 
 /**
- * print_dog -
- *
- * Return: 
+ * init_dog - initialize structure dog
+ * @d: Dog to initialize
+ * @name: name to initialize
+ * @age: age to initialize
+ * @owner: owner  to initialize
  */
-void print_dog(struct dog *d)
+void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
 }

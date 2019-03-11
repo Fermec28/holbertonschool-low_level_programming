@@ -8,6 +8,7 @@ int str_length(char *str);
 void reverse_str(char *str, int size);
 void myprint(char *str);
 void check_digits(int argc, char *argv[]);
+int product_characters(char num1, char num2);
 /**
  * main -Entry Point
  * @argc: Num of arguments
@@ -16,8 +17,9 @@ void check_digits(int argc, char *argv[]);
  */
 int main(int argc, char *argv[])
 {
-	int i_argc, i_argv;
+	int i_argc, i_argv, bias;
 	int l_str1, l_str2, size;
+	int i_str1 = 0,i_str2 = 0;
 	char *p;
 
 	if (argc != 3)
@@ -39,10 +41,24 @@ int main(int argc, char *argv[])
 	}
 	fill_array(p,0,size - 1, '0');
 	p[size] = '\0';
+	while(argv[1][i_str1])
+	{
+		while(argv[2][i_str2])
+		{
+			bias = product_characters(argv[2][i_str2],argv[1][i_str1]);
+			printf("%d\n",bias);
+			i_str2++;
+		}
+		i_str2 = 0;
+		i_str1++;
+	}
 	free(p);
 	return (0);
 }
-
+int product_characters(char num1, char num2)
+{
+	return ((num1 - '0') * (num2 - '0'));
+}
 void check_digits(int argc, char *argv[])
 {
 	int i_argc, i_argv;

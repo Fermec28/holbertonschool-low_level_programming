@@ -1,6 +1,10 @@
 #include <stdlib.h>
 #include "dog.h"
-
+/**
+ * _strcpy - copy string
+ * @str: string to copy
+ * Return: ponter pointed to memory allocation
+ */
 char *_strcpy(char *str)
 {
 	char *p;
@@ -10,14 +14,22 @@ char *_strcpy(char *str)
 		;
 	p = malloc(sizeof(char) * (size + 1));
 	if (!p)
-		return NULL;
+		return (NULL);
 	for (; size >= 0; size--)
 		p[size] = str[size];
 	return (p);
 }
+/**
+ * new_dog - Create Dog
+ * @name: name of Dog
+ * @age: age of Dog
+ * @owner: Owner of Dog
+ * Return: pointer to New Dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t * p;
+	dog_t *p;
+
 	p = malloc(sizeof(dog_t));
 	if (p == NULL)
 		return (NULL);

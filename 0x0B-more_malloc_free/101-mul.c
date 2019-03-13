@@ -17,7 +17,7 @@ int product_characters(char num1, char num2);
  */
 int main(int argc, char *argv[])
 {
-	int i_argc, i_argv, bias;
+	int bias;
 	int l_str1, l_str2, size;
 	int i_str1 = 0, i_str2 = 0;
 	char *p;

@@ -74,9 +74,8 @@ int main(int argc, char *argv[])
 			{
 				size++;
 				p = realloc(p, size + 1);
-				if (!p)
+				if (p == NULL)
 				{
-					free(p);
 					printf("Error\n");
 					exit(98);
 				}

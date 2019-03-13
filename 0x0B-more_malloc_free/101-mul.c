@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	l_str2  = str_length(argv[2]);
 	if ((l_str1 && argv[1][0] == '0') || (l_str1 && argv[2][0] == '0'))
 	{
-		printf("%c\n",48);
+		printf("%c\n", 48);
 		return (0);
 	}
 	reverse_str(argv[1], str_length(argv[1]));

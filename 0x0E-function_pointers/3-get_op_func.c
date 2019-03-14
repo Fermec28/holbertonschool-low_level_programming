@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "function_pointers.h"
 #include "3-calc.h"
+/**
+ * get_op_func - slect function to be performed
+ * @s: string to make the function
+ * Return: pointer function
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {

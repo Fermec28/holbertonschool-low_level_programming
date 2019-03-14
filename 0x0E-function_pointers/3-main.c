@@ -17,11 +17,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if(((strcmp("/", argv[2]) == 0) || (strcmp("%", argv[2]) == 0)) && !(atoi(argv[3])))
-	{
-		printf("Error\n");
-		exit(100);
-	}
 	f = get_op_func(argv[2]);
 	printf("%d\n", f(atoi(argv[1]), atoi(argv[3])));
 	return (0);

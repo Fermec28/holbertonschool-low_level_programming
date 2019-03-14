@@ -21,7 +21,7 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 /**
- * op_add - add function
+ * op_mul - add function
  * @a: number1
  * @b: number2
  * Return: add to numbers

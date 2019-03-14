@@ -1,11 +1,27 @@
+#include <stdio.h>
 #include "function_pointers.h"
 
 /**
- * op_add -
- *
- * Return: 
+ * main - Entry point
+ * @argc: count of arguments
+ * @argv: array with arguments
+ * Return: 0 if succes, 98 worng parameters and 99 if no operator
  */
-int op_add(int a, int b)
+int main(int argc, char *argv[])
 {
+	int (*f)(int, int);
 
+	if (argc != 4)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	f = get_op_func(argv[2]);
+	if (f == NULL)
+	{
+		printf("Error\n");
+		exit(98);
+	}
+	printf("%d\n", f(atoi(argv[1]), atoi(argv[3])));
+	return (0);
 }

@@ -16,7 +16,7 @@ int main(void)
 
 	while ( *((char*)f + i))
 	{
-		printf("%ud ", *((char*)f + i));
+		printf("%x ", *((char*)f + i));
 		i++;
 	}
 	printf("\n");

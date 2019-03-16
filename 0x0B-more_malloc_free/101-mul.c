@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 			}
 			i_str2++;
 		}
-		while (bias % 10 != 0)
+		while (bias % 10 != 0 ||  bias > 0)
 		{
 			if (i_str1 + i_str2 < size && bias % 10 != 0)
 			{

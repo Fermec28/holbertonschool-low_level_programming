@@ -59,11 +59,23 @@ int main(int argc, char *argv[])
 				p[i_str1 + i_str2] = (bias % 10) + 48;
 				bias /= 10;
 			}
+			else
+			{
+				size++;
+				p = realloc(p, size + 1);
+				if (p == NULL)
+				{
+					printf("Error\n");
+					exit(98);
+				}
+				p[size - 1] = (bias % 10) + 48;
+				bias /= 10;
+			}
 			i_str2++;
 		}
-		while (bias % 10 != 0 ||  bias > 0)
+		while (bias > 0)
 		{
-			if (i_str1 + i_str2 < size && bias % 10 != 0)
+			if (i_str1 + i_str2 < size)
 			{
 				bias += p[i_str2] - 48;
 				p[i_str2] = (bias % 10) + 48;

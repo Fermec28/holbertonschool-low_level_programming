@@ -5,14 +5,30 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	int i_format = 0, i_struct = 0;
+	op_t print[] = {
+		{"c", print_char},
+		{NULL,NULL}
+	};
+	va_list valist;
+
 	if (format != NULL)
 	{
-		while (format[i])
+		va_start(valist, format);
+		while (format[i_format])
 		{
-			printf("%c\n", format[i]);
-			i++;
+			i_struct = 0;
+			while (print[i_struct].op != NULL)
+			{
+				printf("%c\n", *(print[i_struct].op));
+				i_struct++;
+			}
+			i_format++;
 		}
 	}
-
+	printf("\n");
+}
+void print_char(const char *data)
+{
+	printf("%c", *data);
 }

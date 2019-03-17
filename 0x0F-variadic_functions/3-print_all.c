@@ -15,12 +15,13 @@ void print_all(const char * const format, ...)
 	if (format != NULL)
 	{
 		va_start(valist, format);
-		while (format[i_format])
+		while (format != NULL, format[i_format] )
 		{
 			i_struct = 0;
 			while (print[i_struct].op != NULL)
 			{
-				printf("%c\n", *(print[i_struct].op));
+				if( format[i_format] == *(print[i_struct].op))
+					print[i_struct].f(valist);
 				i_struct++;
 			}
 			i_format++;
@@ -28,7 +29,7 @@ void print_all(const char * const format, ...)
 	}
 	printf("\n");
 }
-void print_char(const char *data)
+void print_char(va_list valist)
 {
-	printf("%c", *data);
+	printf("%c", va_arg(valist, int));
 }

@@ -16,7 +16,7 @@ void print_string(va_list valist);
  * struct op - Struct op
  *
  * @op: options c: char, i:integer, f:float, s: char
- * @data: data to print
+ * @f: function
  *
  */
 typedef struct op

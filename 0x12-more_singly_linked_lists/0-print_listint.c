@@ -9,7 +9,7 @@ void print_number(int number)
 
 	if (number < 0)
 	{
-		_putchar('-');
+		printf("%c",'-');
 		aux = number / 10;
 		print_number(-aux);
 		aux = number % 10;
@@ -19,7 +19,7 @@ void print_number(int number)
 	{
 		if (number > 9)
 			print_number( number / 10);
-		_putchar((number % 10) + '0');
+		printf("%c",(number % 10) + '0');
 	}
 
 }
@@ -34,8 +34,7 @@ size_t print_listint(const listint_t *h)
 		return (0);
 	else
 	{
-		print_number(h->n);
-		_putchar('\n');
+		printf("%d\n",h->n);
 		return (1 + print_listint(h->next));
 	}
 }

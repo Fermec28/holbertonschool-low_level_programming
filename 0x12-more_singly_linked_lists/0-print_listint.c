@@ -30,13 +30,13 @@ void print_number(int number)
  */
 size_t print_listint(const listint_t *h)
 {
-	if (h == NULL)
-	{
-		return (0);
-	}
-	else
+	int nodes = 0;
+
+	while (h)
 	{
 		printf("%d\n", h->n);
-		return (1 + print_listint(h->next));
+		h = h->next;
+		nodes++;
 	}
+	return (nodes);
 }

@@ -1,8 +1,7 @@
 #include "lists.h"
-
 /**
  * free_listint - free list
- * head: first element
+ * @head: first element
  */
 void free_listint(listint_t *head)
 {

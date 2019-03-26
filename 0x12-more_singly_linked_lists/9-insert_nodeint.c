@@ -3,7 +3,7 @@
 /**
  * insert_nodeint_at_index - insert node in index
  * @head: head of the list
- * @idx index to create the node
+ * @idx: index to create the node
  * @n: data of new node
  * Return: The address of the new node, or NULL if it failed
  */

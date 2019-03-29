@@ -15,6 +15,6 @@ void print_binary(unsigned long int n)
 		aux = n >> 1;
 		if (aux)
 			print_binary(aux);
-		printf("%lu", n & 1);
+		_putchar((n & 1) + '0');
 	}
 }

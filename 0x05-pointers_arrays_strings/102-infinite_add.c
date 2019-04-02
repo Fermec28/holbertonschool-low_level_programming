@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 
- int lengthstr(char *string);
+int lengthstr(char *string);
 void reverse(char *string, unsigned int length);
 /**
  * infinite_add - add infinite numbers

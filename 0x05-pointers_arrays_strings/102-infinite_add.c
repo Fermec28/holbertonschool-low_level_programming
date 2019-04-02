@@ -1,6 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
-unsigned int lengthstr(char *string);
+
+ int lengthstr(char *string);
 void reverse(char *string, unsigned int length);
 /**
  * infinite_add - add infinite numbers
@@ -12,9 +13,8 @@ void reverse(char *string, unsigned int length);
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i;
-	char bias = 0, aux;
-	unsigned int l_n1 = lengthstr(n1), l_n2 = lengthstr(n2);
+	char bias = 0;
+	int i, l_n1 = lengthstr(n1), l_n2 = lengthstr(n2);
 
 	for (i = 0; i < size_r; i++)
 	{
@@ -77,7 +77,7 @@ void reverse(char *string, unsigned int length)
  * @string: string to calculate the length
  * Return: length of string
  */
-unsigned int lengthstr(char *string)
+int lengthstr(char *string)
 {
 	int i = 0;
 

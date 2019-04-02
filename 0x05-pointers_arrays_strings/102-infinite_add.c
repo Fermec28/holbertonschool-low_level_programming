@@ -18,7 +18,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 	for (i = 0; i < size_r; i++)
 	{
-		if ((i < l_n1 || i < l_n2) && i < size_r)
+		if ((i < l_n1 || i < l_n2))
 		{
 			if (i < l_n1)
 				bias = bias + n1[l_n1 - i - 1] - '0';

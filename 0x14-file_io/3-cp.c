@@ -31,7 +31,19 @@ int main(int argc, char *argv[])
 	}
 	while((bytes = read(fd_source, buffer, 1024 )) > 0)
 	{
-		write(fd_destination,  buffer, bytes);
+		bytes = write(fd_destination,  buffer, bytes);
+		if (bytes == -1)
+		{
+			close(fd_destination);
+			close(fd_source);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+	if (fd_source == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	bytes = close(fd_source);
 	if (bytes == -1)

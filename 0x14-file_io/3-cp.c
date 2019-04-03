@@ -8,6 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int fd_source, bytes, fd_destination;
+	char buffer[1024];
 
 	if (argc != 3)
 	{
@@ -27,6 +28,10 @@ int main(int argc, char *argv[])
 		close(fd_source);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
+	}
+	while((bytes = read(fd_source, buffer, 1024 )) > 0)
+	{
+		write(fd_destination,  buffer, bytes);
 	}
 	bytes = close(fd_source);
 	if (bytes == -1)

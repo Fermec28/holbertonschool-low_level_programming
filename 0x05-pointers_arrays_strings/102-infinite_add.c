@@ -45,7 +45,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			r[i] = bias + '0';
 			r[i + 1] = '\0';
 		}
-		else
+		else if (i >= size_r - 1)
 		{
 			return (NULL);
 		}

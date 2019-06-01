@@ -14,16 +14,16 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (key == NULL || key == '\0' || ht == NULL)
 		return (NULL);
 
-	index = key_index((unsigned char *)key, (*ht).size);
+	index = key_index((unsigned char *)key, ht->size);
 
 	aux = ht->array[index];
 	while (aux != NULL)
 	{
 		if (strcmp(aux->key, key) == 0)
 		{
-			return (aux->.value);
+			return (aux->value);
 		}
-		temp = aux->next;
+		aux = aux->next;
 	}
 	return (NULL);
 

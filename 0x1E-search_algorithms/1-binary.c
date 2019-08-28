@@ -31,21 +31,33 @@ int binary_search(int *array, size_t size, int value)
 {
 	if (array == NULL || *array > value)
 		return (-1);
-
-	size_t pivote;
-
-	pivote = size % 2 == 0 ? size / 2 : (size / 2) + 1;
-	if (pivote)
+	print_array(array, size);
+	if (size == 1 && *array == value)
+		return (0);
+	else if (size == 1 && *array < value)
+		return (-1);
+	else
 	{
-		print_array(array, size);
+		size_t pivote = size % 2 == 0? size / 2: (size / 2) + 1;
+
 		if (array[pivote - 1] == value)
-			return (pivote + 1);
+		{
+			return (pivote - 1 + binary_search(array + pivote - 1, 1, value));
+		}
 		else if (value < array[pivote - 1])
-			return (binary_search(array,
-					      pivote - 1, value));
+		{
+			return (binary_search(array, pivote - 1, value));
+		}
 		else if (value > array[pivote - 1])
-			return (binary_search(array + pivote,
-						      size - pivote, value));
+		{
+			int aux;
+
+			aux = binary_search(array + pivote, size - pivote,
+					    value);
+			if (aux < 0)
+				return (-1);
+			return (pivote + aux);
+		}
 	}
 	return (-1);
 }

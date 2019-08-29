@@ -36,28 +36,26 @@ int binary_search(int *array, size_t size, int value)
 		return (0);
 	else if (size == 1 && *array < value)
 		return (-1);
-	else
+
+	size_t pivote = size % 2 == 0 ? size / 2 : (size / 2) + 1;
+
+	if (array[pivote - 1] == value)
 	{
-		size_t pivote = size % 2 == 0? size / 2: (size / 2) + 1;
+		return (pivote - 1 + binary_search(array + pivote - 1, 1, value));
+	}
+	else if (value < array[pivote - 1])
+	{
+		return (binary_search(array, pivote - 1, value));
+	}
+	else if (value > array[pivote - 1])
+	{
+		int aux;
 
-		if (array[pivote - 1] == value)
-		{
-			return (pivote - 1 + binary_search(array + pivote - 1, 1, value));
-		}
-		else if (value < array[pivote - 1])
-		{
-			return (binary_search(array, pivote - 1, value));
-		}
-		else if (value > array[pivote - 1])
-		{
-			int aux;
-
-			aux = binary_search(array + pivote, size - pivote,
-					    value);
-			if (aux < 0)
-				return (-1);
-			return (pivote + aux);
-		}
+		aux = binary_search(array + pivote, size - pivote,
+				    value);
+		if (aux < 0)
+			return (-1);
+		return (pivote + aux);
 	}
 	return (-1);
 }

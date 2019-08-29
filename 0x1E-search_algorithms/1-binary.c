@@ -29,6 +29,8 @@ void print_array(int *array, size_t size)
  */
 int binary_search(int *array, size_t size, int value)
 {
+	size_t pivote;
+
 	if (array == NULL || *array > value)
 		return (-1);
 	print_array(array, size);
@@ -37,8 +39,7 @@ int binary_search(int *array, size_t size, int value)
 	else if (size == 1 && *array < value)
 		return (-1);
 
-	size_t pivote = size % 2 == 0 ? size / 2 : (size / 2) + 1;
-
+	pivote = size % 2 == 0 ? size / 2 : (size / 2) + 1;
 	if (array[pivote - 1] == value)
 	{
 		return (pivote - 1 + binary_search(array + pivote - 1, 1, value));

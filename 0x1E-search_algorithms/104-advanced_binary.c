@@ -46,7 +46,7 @@ int advanced_binary(int *array, size_t size, int value)
 	{
 		if (value == array[pivote - 1])
 			return (advanced_binary(array, pivote, value));
-		return (advanced_binary(array, pivote - 1, value));
+		return (advanced_binary(array, pivote, value));
 	}
 	else if (value > array[pivote - 1])
 	{
